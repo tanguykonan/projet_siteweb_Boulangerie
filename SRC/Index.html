@@ -11,7 +11,7 @@
   <body>
     <header>
       <div class="logo"><a href="">LOGO</a></div>
-      <div class="menu_mob">
+      <div class="menu_mob" role="button" tabindex="1">
         <span></span>
       </div>
       <nav>
@@ -34,4 +34,12 @@
     </main>
     <footer>© Tout droit reservé</footer>
   </body>
+  <script>
+    const btn = document.querySelector(".menu_mob");
+    const nav = document.querySelector("nav ul");
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("open");
+      nav.classList.toggle("open");
+    });
+  </script>
 </html>
